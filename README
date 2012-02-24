@@ -11,6 +11,7 @@ in the configuration use:
   MONGO_LOADER_CNX_STRING = 'mongodb://mongodbserver01,mongodbserver02:27017'
   MONGO_LOADER_SERVER_DB = 'thumbor'
   MONGO_LOADER_SERVER_COLLECTION = 'images'
+  MONGO_LOADER_DOC_FIELD = 'content'
 
 Each image is stored in a document data is stored in a field (default: 'content') as a base64 encoded string.
 
