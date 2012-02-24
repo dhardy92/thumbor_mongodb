@@ -20,7 +20,7 @@ as '4e0f2d4b4ee517690c000000' is a valid _id of a document in the collection.
 
 you can install it with :
 
-  pip install thumbor_mongo
+  pip install thumbor_mongodb
 
 To Test it you nead to install thumbor mongodb and pyvows :
   make test
