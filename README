@@ -13,7 +13,8 @@ in the configuration use:
   MONGO_LOADER_SERVER_COLLECTION = 'images'
   MONGO_LOADER_DOC_FIELD = 'content'
 
-Each image is stored in a document data is stored in a field (default: 'content') as a base64 encoded string.
+Each image is stored in a document (max 16Mo). 
+Data is stored in a field (default: 'content') as a base64 encoded string.
 
 thumbor URL become :
   http://thumbor-server/unsafe/10x10/smart/4e0f2d4b4ee517690c000000
