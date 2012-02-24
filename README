@@ -1,0 +1,26 @@
+Thumbor is a smart imaging service. It enables on-demand crop, resizing and flipping of images.
+  https://github.com/globocom/thumbor/wiki
+
+MongoDB is a document oriented NoSQL database
+  http://www.mongodb.org/
+
+This plugin for Thumbor is a loader that can reach images from a mongodb collection based on its Object(_id)
+
+in the configuration use:
+  LOADER = 'thumbor_mongodb.loader'
+  MONGO_LOADER_CNX_STRING = 'mongodb://mongodbserver01,mongodbserver02:27017'
+  MONGO_LOADER_SERVER_DB = 'thumbor'
+  MONGO_LOADER_SERVER_COLLECTION = 'images'
+
+Each image is stored in a document data is stored in a field (default: 'content') as a base64 encoded string.
+
+thumbor URL become :
+  http://thumbor-server/unsafe/10x10/smart/4e0f2d4b4ee517690c000000
+as '4e0f2d4b4ee517690c000000' is a valid _id of a document in the collection.
+
+you can install it with :
+
+  pip install thumbor_mongo
+
+To Test it you nead to install thumbor mongodb and pyvows :
+  make test
