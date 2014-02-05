@@ -9,9 +9,9 @@
 
 # HBASE STORAGE OPTIONS
 from thumbor.config import Config
-Config.define('MONGO_LOADER_CNX_STRING', 'localhost')
-Config.define('MONGO_LOADER_SERVER_DB', 'thumbor')
-Config.define('MONGO_LOADER_SERVER_COLLECTION', 'images')
-Config.define('MONGO_LOADER_DOC_FIELD', 'content')
+Config.define('MONGO_LOADER_CNX_STRING', 'localhost', "MongodDB connexion string", 'mongo_loader')
+Config.define('MONGO_LOADER_SERVER_DB', 'thumbor', 'MongoDB database', 'mongo_loader')
+Config.define('MONGO_LOADER_SERVER_COLLECTION', 'images', 'MongoDB Collection', 'mongo_loader')
+Config.define('MONGO_LOADER_DOC_FIELD', 'content', 'MongoDB document field used for image content', 'mongo_loader')
 
-__version__ = "0.1"
+__version__ = "0.2"
